@@ -1,0 +1,71 @@
+{
+  "info": {
+    "_postman_id": "budget-tracker-collection",
+    "name": "Smart Budget Guardian",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Expense",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category\": \"Food\",\n  \"amount\": 45.50,\n  \"date\": \"2025-04-06\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/expenses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "expenses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Expenses",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/expenses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "expenses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Summary by Category",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/expenses/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "expenses",
+            "summary"
+          ]
+        }
+      }
+    }
+  ]
+}
